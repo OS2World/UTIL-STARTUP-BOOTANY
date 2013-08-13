@@ -1,0 +1,7 @@
+prefdisk.exe : prefdisk.obj bootio.obj
+   link /noi /noe /farcall prefdisk bootio,prefdisk.exe;
+bootio.obj : bootio.asm
+   masm bootio,bootio,bootio;
+prefdisk.obj : prefdisk.c bootany.h
+   cl /AS /c /Foprefdisk.obj prefdisk.c
+

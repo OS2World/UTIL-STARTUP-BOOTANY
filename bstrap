@@ -1,0 +1,5 @@
+bstrap.com : bstrap.obj
+   link /noi /noe /tiny /farcall bstrap,bstrap.com;
+bstrap.obj : bstrap.asm
+   masm bstrap,,bstrap;
+

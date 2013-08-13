@@ -1,0 +1,7 @@
+showboot.exe : showboot.obj bootio.obj
+   link /noi /noe /farcall showboot bootio,showboot.exe;
+bootio.obj : bootio.asm
+   masm bootio,bootio,bootio;
+showboot.obj : showboot.c bootany.h
+   cl /AS /c /Foshowboot.obj showboot.c
+

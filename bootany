@@ -1,0 +1,5 @@
+bootany.sys : bootany.obj
+   link /noi /noe /tiny /farcall bootany,bootany.sys;
+bootany.obj : bootany.asm
+   masm bootany,,bootany;
+

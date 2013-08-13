@@ -1,0 +1,7 @@
+preinst.exe : preinst.obj bootio.obj
+   link /noi /noe /farcall preinst bootio,preinst.exe;
+bootio.obj : bootio.asm
+   masm bootio,bootio,bootio;
+preinst.obj : preinst.c bootany.h
+   cl /AS /c /Fopreinst.obj preinst.c
+
